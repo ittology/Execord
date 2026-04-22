@@ -1,0 +1,140 @@
+/* Doc pages shared styles */
+
+.nav-back {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-back:hover {
+    color: #fff;
+}
+
+.doc-content {
+    max-width: 760px;
+    margin: 60px auto 120px;
+    padding: 0 24px;
+}
+
+.doc-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.doc-content h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.doc-content h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 48px 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doc-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 32px 0 12px;
+}
+
+.doc-content p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.doc-content ul {
+    color: var(--text-secondary);
+    padding-left: 24px;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.doc-content ul li {
+    margin-bottom: 6px;
+}
+
+.doc-content a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.doc-content a:hover {
+    color: #fff;
+}
+
+.doc-content hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 48px 0;
+}
+
+.doc-content strong {
+    color: var(--text-primary);
+}
+
+.doc-content em {
+    color: var(--text-secondary);
+}
+
+.doc-note {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--text-secondary);
+    border-radius: 8px;
+    padding: 16px 20px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 24px 0;
+    line-height: 1.6;
+}
+
+.doc-content blockquote {
+    border-left: 3px solid var(--border-color);
+    padding: 12px 20px;
+    margin: 24px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Table */
+.doc-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95rem;
+}
+
+.doc-content th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doc-content td {
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.doc-content tr:last-child td {
+    border-bottom: none;
+}

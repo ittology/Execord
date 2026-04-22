@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features & Capabilities — Execord</title>
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/app-icons/1369325346465517609/af21a42389c4bff77c9f746a78cf100a.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/doc.css">
+</head>
+<body>
+    <div class="dot-grid"></div>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="brand">Execord.</a>
+                <a href="index.html" class="nav-back">← Back</a>
+            </nav>
+        </header>
+        <main class="doc-content">
+            <h1>Features &amp; Capabilities</h1>
+            <p>This document provides a structured list of everything Execord can do on your Discord server. Because Execord translates natural language into structured actions, it's important to understand exactly what information the bot can <strong>see</strong> (read) versus what it can <strong>change</strong> (execute).</p>
+            <p>If you ask the bot to do something and it says it cannot, it is likely because that specific property or endpoint is not listed below.</p>
+
+            <hr>
+
+            <h2>Reading Data (What Execord can see)</h2>
+            <p>Before making changes, Execord can look up information about your server to gather context. It only retrieves data when specifically asked.</p>
+
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>What the bot can read</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Server (Guild)</strong></td><td>Server ID, Name, Description, Icon URL, Owner, Creation Date, Locale, Premium Tier, Member Count, Verification Level, System/Rules/Updates Channels.</td></tr>
+                    <tr><td><strong>Categories</strong></td><td>Category ID, Name, Position, Creation Date, Channels inside it, Permission Overwrites.</td></tr>
+                    <tr><td><strong>Channels</strong></td><td>Channel ID, Type (Text/Voice/Forum/Stage), Category, Name, Position, Topic, NSFW status, News status, Slowmode Delay, Bitrate, User Limit (Voice), Available Tags &amp; Reaction Emojis (Forum).</td></tr>
+                    <tr><td><strong>Roles</strong></td><td>Role ID, Name, Color (Hex), Permissions list, Position, Mentionable status, Hoist status, Managed status, Icon URL.</td></tr>
+                    <tr><td><strong>Members (Max 50)</strong></td><td>User ID, Username, Display Name, Avatar, Bot status, Server Nickname, Joined Date, Timeout status, and current Roles.</td></tr>
+                    <tr><td><strong>Bans</strong></td><td>List of banned Users and the Reason for their ban.</td></tr>
+                    <tr><td><strong>Threads</strong></td><td>Thread ID, Owner, Parent Channel, Name, Type (Public/Private/News), Tags, Slowmode, Creation Date, Archived/Locked status.</td></tr>
+                    <tr><td><strong>Messages (Max 50)</strong></td><td>Message ID, Location, Author, Content (Text), Pinned status, Creation/Edit Date, and if it replies to another message.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="doc-note">Execord cannot read messages outside of the channel you run the command in, unless you explicitly ask it to. It does not log message content.</div>
+
+            <hr>
+
+            <h2>Modifying Data (What Execord can change)</h2>
+
+            <h3>Server Settings</h3>
+            <ul>
+                <li><strong>Edit Details:</strong> Update the server Name, Description, Language (Locale), and Verification Level.</li>
+                <li><strong>Edit Assets:</strong> Set or change the Icon, Banner, and Splash Image.</li>
+                <li><strong>Assign Channels:</strong> Define which channel acts as the Rules, Public Updates, or System/Welcome channel.</li>
+            </ul>
+
+            <h3>Categories</h3>
+            <ul>
+                <li><strong>Create:</strong> Set the Name, Position, and initial Permission Overwrites.</li>
+                <li><strong>Edit:</strong> Rename categories, move them, or adjust their permissions.</li>
+                <li><strong>Delete:</strong> Safely remove single or multiple categories at once.</li>
+            </ul>
+
+            <h3>Channels</h3>
+            <ul>
+                <li><strong>Create &amp; Edit:</strong> Set the Name, Category, Position, and custom Permissions.</li>
+                <li><strong>Text Channels:</strong> Toggle NSFW and News status, set Topics, apply Slowmode cooldowns.</li>
+                <li><strong>Voice Channels:</strong> Enforce User Limits (1–99 participants).</li>
+                <li><strong>Forum Channels:</strong> Create Tags, require tags for new posts, set a default Reaction Emoji.</li>
+                <li><strong>Delete:</strong> Instantly bulk-delete any number of channels.</li>
+            </ul>
+
+            <h3>Roles &amp; Permissions</h3>
+            <ul>
+                <li><strong>Create Roles:</strong> Define Name, Hex Color, and specific Discord Permissions. Set them as hoisted or mentionable.</li>
+                <li><strong>Edit Roles:</strong> Modify any property, including setting a custom Role Icon image.</li>
+                <li><strong>Complex Permissions:</strong> Target @everyone, specific Roles, or specific Members to allow or deny permissions on any channel or category.</li>
+                <li><strong>Delete Roles:</strong> Bulk-delete old or unused roles.</li>
+            </ul>
+
+            <h3>Member Moderation</h3>
+            <ul>
+                <li><strong>Timeouts:</strong> Temporarily mute users for any duration between 1 minute and 28 days.</li>
+                <li><strong>Kicks:</strong> Remove a member from the server with an audit log reason.</li>
+                <li><strong>Bans &amp; Unbans:</strong> Ban members, optionally delete message history (up to 7 days). Bulk-unban by User ID.</li>
+                <li><strong>Edit Profiles:</strong> Change a member's server nickname or assign/remove multiple roles at once.</li>
+            </ul>
+
+            <h3>Messaging &amp; Threads</h3>
+            <ul>
+                <li><strong>Send Messages:</strong> Send text or image attachments to any channel. Send private (ephemeral) messages visible only to you.</li>
+                <li><strong>Manage Messages:</strong> Edit bot messages or pin important messages to a channel.</li>
+                <li><strong>Purge Messages:</strong> Delete specific messages by ID, or bulk-purge the last X messages in a channel.</li>
+                <li><strong>Manage Threads:</strong> Create, edit, or delete Public, Private, or News threads.</li>
+            </ul>
+
+            <h3>Images</h3>
+            <ul>
+                <li><strong>Provide URLs:</strong> Supply an existing image URL and tell Execord to use it.</li>
+                <li><strong>Generate Images:</strong> Create images from text prompts using AI.</li>
+                <li><strong>Apply Everywhere:</strong> Both provided URLs and generated images can be applied as message attachments, Role Icons, Server Icons, Server Banners, or Invite Splash Images.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Action Chaining</h2>
+            <p>Because Execord uses a Large Language Model, it can smartly use variables between actions. For example:</p>
+            <blockquote>"Create a role called VIP, then create a private text channel where only VIPs can read messages, and post a welcome message inside it."</blockquote>
+            <p>The bot will execute this perfectly in one go — creating the role, saving its ID, creating the channel with the correct permission overwrite, and sending the message into the new channel.</p>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Execord</p>
+                <div class="footer-links">
+                    <a href="https://youtube.com/@ittology">YouTube</a>
+                    <a href="https://ko-fi.com/ittology">Support</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
