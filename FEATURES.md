@@ -24,6 +24,7 @@ Before making changes, Execord can look up information about your server to gath
 | **Bans** | List of banned Users and the Reason for their ban. |
 | **Threads** | Thread ID, Owner, Parent Channel, Name, Type (Public/Private/News), Tags, Slowmode, Creation Date, Archived/Locked status. |
 | **Messages (Max 50 at once)** | Message ID, Location, Author, Content (Text), Pinned status, Creation/Edit Date, and if it replies to another message. |
+| **Audit Logs (Max 50 at once)** | Action taken, Member who performed it, Target of the action, Reason provided, and Creation Date. |
 
 > [!NOTE]
 > Execord **cannot** read messages outside of the channel you run the command in, unless you explicitly tell it to "Read the last 10 messages in #[channel name]". It does not log message content.

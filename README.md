@@ -29,6 +29,7 @@ Execord's AI interprets your intent, builds a sequence of actions, and executes 
 | **Bulk Cleanup** | *"Delete the 'Old-Archives' category and all channels inside it."* |
 | **Visuals** | *"Generate a futuristic shield icon and set it as the server icon."* |
 | **Permissions** | *"Create an announcements channel that only the @Admin role can write in."* |
+| **Investigation** | *"Who was the last person to ban a member?"* |
 
 ## ✨ Core Features
 
@@ -53,7 +54,7 @@ Execord utilizes a sophisticated **Intent-to-Action pipeline**:
 
 1.  **[Invite Execord](https://top.gg/bot/1369325346465517609/invite)** to your server.
 2.  Ensure it has the `Administrator` permission (required for full automation).
-3.  Type `/perform` followed by your request in any channel.
+3.  Type `/execute` followed by your request in any channel.
 
 ---
 
