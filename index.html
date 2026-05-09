@@ -148,6 +148,40 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.querySelectorAll('.example-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.title = 'Click to copy command';
+            
+            card.addEventListener('click', async () => {
+                const promptElement = card.querySelector('.example-prompt');
+                const tagElement = card.querySelector('.example-tag');
+                
+                let text = promptElement.textContent.trim();
+                if (text.startsWith('"') && text.endsWith('"')) {
+                    text = text.substring(1, text.length - 1);
+                }
+                
+                const command = `/execute prompt:${text}`;
+                
+                try {
+                    await navigator.clipboard.writeText(command);
+                    
+                    const originalTagText = tagElement.dataset.originalText || tagElement.textContent;
+                    tagElement.dataset.originalText = originalTagText;
+                    
+                    tagElement.textContent = 'Copied to clipboard!';
+                    tagElement.style.color = '#23d160';
+                    
+                    setTimeout(() => {
+                        tagElement.textContent = originalTagText;
+                        tagElement.style.color = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text:', err);
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
