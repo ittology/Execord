@@ -157,7 +157,7 @@
                 const promptElement = card.querySelector('.example-prompt');
                 const tagElement = card.querySelector('.example-tag');
                 
-                let text = promptElement.textContent.trim();
+                let text = promptElement.textContent.trim().replace(/\s+/g, ' ');
                 if (text.startsWith('"') && text.endsWith('"')) {
                     text = text.substring(1, text.length - 1);
                 }
