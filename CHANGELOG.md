@@ -1,3 +1,7 @@
+---
+layout: default
+title: Changelog
+---
 # Changelog
 
 All notable changes to the Execord project will be documented in this file.
