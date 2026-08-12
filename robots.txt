@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ittology.github.io/Execord/sitemap.xml

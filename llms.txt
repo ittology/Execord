@@ -1,0 +1,37 @@
+# Execord - Natural Language Discord Automation Bot
+
+> Execord is an AI-powered Discord agent that allows server administrators to manage their entire server using natural language prompts instead of complex slash commands.
+
+## Overview
+Execord converts plain text instructions into structured multi-step Discord API actions using an Orchestrator and domain-specific Sub-Agents (channels, roles, members, threads, messages, categories).
+
+## Core Capabilities & Features
+- **Server Architecture:** Create, edit, move, or delete channels, categories, and voice/forum channels with custom topics, slowmodes, bitrate, and user limits.
+- **Role & Permission Management:** Create hex-colored roles (e.g. `#FFD700`), set hoist/mention properties, and configure complex channel permission overwrites for roles or members.
+- **Instant Moderation:** Timeout users (1 min to 28 days), kick members, ban users with audit log reasons, bulk-unban by User ID, and purge message history.
+- **Messaging & Communication:** Send text or image messages, pin important posts, send private (ephemeral) responses, or bulk-purge messages.
+- **Thread Management:** Create, lock, archive, or configure slowmodes for public, private, or forum threads.
+- **AI Image Generation & Server Branding:** Generate custom graphics via AI text prompts and automatically apply them as server icons, banners, role icons, or channel attachments.
+- **Audit & Analytics:** Query past server audit logs, read channel message history, inspect member lists, and analyze server configuration.
+
+## Commands & Usage
+Execord operates primarily through Discord slash commands:
+- `/execute prompt:[text]` - Executes natural language instructions on the server (e.g. `/execute prompt:create a VIP role in gold and assign it to @User`).
+- `/account` - Displays account status, daily token balance, and usage limits.
+- `/help` - Displays the interactive help menu and command guide.
+
+## Example Prompts
+- *"Create a community category with a general chat and 3 voice channels."*
+- *"Timeout @User for 1 hour for violating community rules."*
+- *"Create a 'VIP' role in gold (#FFD700) and give it to @User."*
+- *"Generate a futuristic shield icon and set it as the server icon."*
+- *"Create an announcements channel that only the @Admin role can write in."*
+- *"Who was the last person to ban a member?"*
+
+## Official Links & Resources
+- [Website](https://ittology.github.io/Execord)
+- [Invite Bot to Discord](https://top.gg/bot/1369325346465517609/invite)
+- [Support Server](https://discord.gg/BBJTAsd8jy)
+- [Documentation & Capabilities](https://ittology.github.io/Execord/FEATURES.html)
+- [Privacy Policy](https://ittology.github.io/Execord/PRIVACY.html)
+- [Terms of Service](https://ittology.github.io/Execord/TERMS.html)
