@@ -67,7 +67,7 @@ Execord utilizes a **Multi-Agent Intent-to-Action pipeline**:
 
 ## 📖 Legal & Security
 
-- [Privacy Policy](PRIVACY.md) | [Terms of Service](TERMS.md) | [Security Policy](SECURITY.md)
+- [Privacy Policy](PRIVACY.md) | [Terms of Service](TERMS.md) | [Security Policy](SECURITY.md) | [Legal Notice](LEGAL.md)
 
 ---
 *© 2026 Execord - Redefining Discord Management with AI.*
