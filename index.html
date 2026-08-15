@@ -161,6 +161,19 @@
             <!-- Pricing -->
             <section id="pricing" class="pricing-section" aria-labelledby="pricing-title">
                 <h2 id="pricing-title" class="section-title">Choose what fits your server</h2>
+                
+                <!-- Billing Toggle -->
+                <div class="pricing-toggle-container">
+                    <div class="pricing-toggle-wrapper" role="radiogroup" aria-label="Billing frequency">
+                        <button type="button" class="pricing-toggle-btn active" id="toggle-monthly" aria-checked="true" role="radio">
+                            Monthly
+                        </button>
+                        <button type="button" class="pricing-toggle-btn" id="toggle-yearly" aria-checked="false" role="radio">
+                            Yearly <span class="toggle-save-badge">Save ~17%</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div class="pricing-grid">
                     <!-- Free Tier -->
                     <article class="pricing-card">
@@ -168,9 +181,12 @@
                             <span class="pricing-badge">Free Forever</span>
                             <h3>Free</h3>
                             <p>Essential natural language management for any Discord server.</p>
-                            <div class="pricing-price">
-                                <span class="amount">$0.00</span>
-                                <span class="period">/ month</span>
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <span class="amount">$0.00</span>
+                                    <span class="period" data-monthly="/ month" data-yearly="/ year">/ month</span>
+                                </div>
+                                <div class="pricing-subtext">&nbsp;</div>
                             </div>
                         </div>
                         <ul class="pricing-features">
@@ -187,9 +203,12 @@
                             <span class="pricing-badge">Most Popular</span>
                             <h3>Pro</h3>
                             <p>For growing communities needing higher limits and faster execution.</p>
-                            <div class="pricing-price">
-                                <span class="amount">$4.99</span>
-                                <span class="period">/ month</span>
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <span class="amount" data-monthly="$4.99" data-yearly="$4.16">$4.99</span>
+                                    <span class="period">/ month</span>
+                                </div>
+                                <div class="pricing-subtext" data-monthly="" data-yearly="billed $49.95 / year">&nbsp;</div>
                             </div>
                         </div>
                         <ul class="pricing-features">
@@ -199,7 +218,7 @@
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span><strong>Smarter &amp; ~4x Faster</strong> AI Engine</span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span><strong>Priority</strong> Support</span></li>
                         </ul>
-                        <a href="https://whop.com/checkout/plan_0x0g2aD8ZYln7" target="_blank" rel="noopener" class="btn btn-primary">Upgrade to Pro</a>
+                        <a id="btn-pro-checkout" href="https://whop.com/checkout/plan_0x0g2aD8ZYln7" target="_blank" rel="noopener" class="btn btn-primary" data-monthly-href="https://whop.com/checkout/plan_0x0g2aD8ZYln7" data-yearly-href="https://whop.com/checkout/plan_CXetM8QmaZhmC">Upgrade to Pro</a>
                     </article>
 
                     <!-- Ultra Tier -->
@@ -208,9 +227,12 @@
                             <span class="pricing-badge">Power &amp; Scale</span>
                             <h3>Ultra</h3>
                             <p>Maximum speed, power, and limits for large Discord networks.</p>
-                            <div class="pricing-price">
-                                <span class="amount">$9.99</span>
-                                <span class="period">/ month</span>
+                            <div class="pricing-price-wrapper">
+                                <div class="pricing-price">
+                                    <span class="amount" data-monthly="$9.99" data-yearly="$8.33">$9.99</span>
+                                    <span class="period">/ month</span>
+                                </div>
+                                <div class="pricing-subtext" data-monthly="" data-yearly="billed $99.95 / year">&nbsp;</div>
                             </div>
                         </div>
                         <ul class="pricing-features">
@@ -220,7 +242,7 @@
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span><strong>Smarter &amp; ~4x Faster</strong> AI Engine</span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> <span><strong>Highest Priority</strong> Support</span></li>
                         </ul>
-                        <a href="https://whop.com/checkout/plan_fzmWCvSEBQgG6" target="_blank" rel="noopener" class="btn btn-secondary">Upgrade to Ultra</a>
+                        <a id="btn-ultra-checkout" href="https://whop.com/checkout/plan_fzmWCvSEBQgG6" target="_blank" rel="noopener" class="btn btn-secondary" data-monthly-href="https://whop.com/checkout/plan_fzmWCvSEBQgG6" data-yearly-href="https://whop.com/checkout/plan_6p2Zw9GHG7nyS">Upgrade to Ultra</a>
                     </article>
                 </div>
             </section>
@@ -303,6 +325,54 @@
                 }
             });
         });
+
+        // Billing Toggle Logic (Monthly vs. Yearly)
+        const toggleMonthly = document.getElementById('toggle-monthly');
+        const toggleYearly = document.getElementById('toggle-yearly');
+
+        if (toggleMonthly && toggleYearly) {
+            const updateBillingPeriod = (isYearly) => {
+                toggleMonthly.classList.toggle('active', !isYearly);
+                toggleMonthly.setAttribute('aria-checked', (!isYearly).toString());
+                toggleYearly.classList.toggle('active', isYearly);
+                toggleYearly.setAttribute('aria-checked', isYearly.toString());
+
+                // Update amounts
+                document.querySelectorAll('.pricing-price .amount').forEach(el => {
+                    if (el.dataset.monthly && el.dataset.yearly) {
+                        el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
+                    }
+                });
+
+                // Update periods
+                document.querySelectorAll('.pricing-price .period').forEach(el => {
+                    if (el.dataset.monthly && el.dataset.yearly) {
+                        el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
+                    }
+                });
+
+                // Update subtexts
+                document.querySelectorAll('.pricing-subtext').forEach(el => {
+                    if (el.dataset.yearly !== undefined) {
+                        el.textContent = isYearly ? el.dataset.yearly : (el.dataset.monthly || '\u00A0');
+                    }
+                });
+
+                // Update checkout buttons
+                const btnPro = document.getElementById('btn-pro-checkout');
+                if (btnPro && btnPro.dataset.monthlyHref && btnPro.dataset.yearlyHref) {
+                    btnPro.href = isYearly ? btnPro.dataset.yearlyHref : btnPro.dataset.monthlyHref;
+                }
+
+                const btnUltra = document.getElementById('btn-ultra-checkout');
+                if (btnUltra && btnUltra.dataset.monthlyHref && btnUltra.dataset.yearlyHref) {
+                    btnUltra.href = isYearly ? btnUltra.dataset.yearlyHref : btnUltra.dataset.monthlyHref;
+                }
+            };
+
+            toggleMonthly.addEventListener('click', () => updateBillingPeriod(false));
+            toggleYearly.addEventListener('click', () => updateBillingPeriod(true));
+        }
     </script>
 </body>
 </html>

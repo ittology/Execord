@@ -363,13 +363,16 @@ h1 {
     margin-bottom: 24px;
 }
 
+.pricing-price-wrapper {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .pricing-price {
     display: flex;
     align-items: baseline;
     gap: 4px;
-    margin-bottom: 28px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .pricing-price .amount {
@@ -410,6 +413,69 @@ h1 {
 
 .pricing-features li strong {
     color: #fff;
+}
+
+.pricing-subtext {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    min-height: 18px;
+    margin-top: 4px;
+}
+
+/* Pricing Toggle Switch (Clean GitHub Dark Style) */
+.pricing-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+
+.pricing-toggle-wrapper {
+    display: inline-flex;
+    align-items: center;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 3px;
+}
+
+.pricing-toggle-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pricing-toggle-btn:hover {
+    color: #fff;
+}
+
+.pricing-toggle-btn.active {
+    background: #21262d;
+    color: #ffffff;
+    border: 1px solid var(--border-color);
+}
+
+.toggle-save-badge {
+    background: rgba(35, 209, 96, 0.15);
+    color: #23d160;
+    border: 1px solid rgba(35, 209, 96, 0.3);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
 }
 
 .pricing-card .btn {
