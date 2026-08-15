@@ -18,6 +18,10 @@ Execord converts plain text instructions into structured multi-step Discord API 
 Execord operates primarily through Discord slash commands:
 - `/execute prompt:[text]` - Executes natural language instructions on the server (e.g. `/execute prompt:create a VIP role in gold and assign it to @User`).
 - `/account` - Displays account status, daily token balance, and usage limits.
+- `/premium` - Displays Free, Pro, and Ultra plan comparisons with direct Whop checkout buttons.
+- `/referral` - View and manage your referral link to earn bonus tokens and subscription rewards.
+- `/vote` - Vote on Top.gg to earn 10,000 daily bonus tokens.
+- `/status` - Displays system health, latency, uptime, and guild stats.
 - `/help` - Displays the interactive help menu and command guide.
 
 ## Example Prompts
