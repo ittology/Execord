@@ -17,6 +17,7 @@ Execord converts plain text instructions into structured multi-step Discord API 
 ## Commands & Usage
 Execord operates primarily through Discord slash commands:
 - `/execute prompt:[text]` - Executes natural language instructions on the server (e.g. `/execute prompt:create a VIP role in gold and assign it to @User`).
+- `/resume` - Resumes a paused execution from where you left off when limits reset.
 - `/account` - Displays account status, daily token balance, and usage limits.
 - `/premium` - Displays Free, Pro, and Ultra plan comparisons with direct Whop checkout buttons.
 - `/referral` - View and manage your referral link to earn bonus tokens and subscription rewards.
