@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notice — Execord</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Legal — Execord</title>
     <link rel="icon" type="image/png"
         href="https://cdn.discordapp.com/app-icons/1369325346465517609/af21a42389c4bff77c9f746a78cf100a.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,44 +21,71 @@
         <header>
             <nav>
                 <a href="index.html" class="brand">Execord.</a>
-                <a href="index.html" class="nav-back">← Back</a>
+                <div class="doc-nav-right">
+                    <div class="lang-switch" role="group" aria-label="Language Selector">
+                        <button type="button" class="lang-btn active" id="lang-btn-en"
+                            onclick="setLanguage('en')">EN</button>
+                        <button type="button" class="lang-btn" id="lang-btn-de" onclick="setLanguage('de')">DE</button>
+                    </div>
+                    <a href="index.html" class="nav-back" id="nav-back-link">← Back</a>
+                </div>
             </nav>
         </header>
+
         <main class="doc-content">
-            <p class="doc-date">Last updated: April 16, 2026</p>
-            <h1>Legal Notice</h1>
-            <p>Information pursuant to § 5 DDG (Digitale-Dienste-Gesetz):</p>
+            <!-- English Content -->
+            <div id="content-en" class="lang-content" data-title="Legal — Execord">
+                <h1>Legal</h1>
+                <p class="protected-data" data-b64="PHN0cm9uZz5KYW5uZXMgSXR0bmVyPC9zdHJvbmc+PGJyPklsbWVuYXVlciBTdHIuIDI1PGJyPjk5NDQ4IEtyYW5pY2hmZWxkPGJyPkdlcm1hbnk="></p>
 
-            <h2>1. Provider / Operator</h2>
-            <p>
-                <strong>Name:</strong> [Name]<br>
-                <strong>Address:</strong> [Street, House Number]<br>
-                <strong>Location:</strong> [Postal Code, City, Country]
-            </p>
+                <h2>Contact</h2>
+                <p>
+                    <strong>Email:</strong> <span class="protected-email" data-b64="aXR0b2xvZ3kuY29udGFjdEBnbWFpbC5jb20="></span><br>
+                    <strong>Support Server:</strong> <a href="https://discord.gg/BBJTAsd8jy" target="_blank"
+                        rel="noopener">Support Discord</a>
+                </p>
 
-            <h2>2. Contact Information</h2>
-            <p>
-                <strong>Email:</strong> [EMAIL_ADDRESS]<br>
-                <strong>Support Server:</strong> <a href="https://discord.gg/BBJTAsd8jy">Support Discord</a>
-            </p>
+                <h2>Consumer Dispute Resolution / Universal Arbitration Board</h2>
+                <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer
+                    arbitration board.</p>
 
-            <h2>3. Small Business Notice</h2>
-            <p>According to § 19 UStG (German Value Added Tax Act), sales tax is not levied or stated
-                (Kleinunternehmerregelung).</p>
+                <p><small>Source: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank"
+                            rel="noopener">https://www.e-recht24.de/impressum-generator.html</a></small></p>
+            </div>
 
-            <h2>4. Consumer Dispute Resolution</h2>
-            <p>We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+            <!-- German Content -->
+            <div id="content-de" class="lang-content hidden" data-title="Impressum — Execord">
+                <h1>Impressum</h1>
+                <p class="protected-data" data-b64="PHN0cm9uZz5KYW5uZXMgSXR0bmVyPC9zdHJvbmc+PGJyPklsbWVuYXVlciBTdHIuIDI1PGJyPjk5NDQ4IEtyYW5pY2hmZWxkPGJyPkRldXRzY2hsYW5k"></p>
+
+                <h2>Kontakt</h2>
+                <p>
+                    <strong>E-Mail:</strong> <span class="protected-email" data-b64="aXR0b2xvZ3kuY29udGFjdEBnbWFpbC5jb20="></span><br>
+                    <strong>Support-Server:</strong> <a href="https://discord.gg/BBJTAsd8jy" target="_blank"
+                        rel="noopener">Support Discord</a>
+                </p>
+
+                <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+                <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                    Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+                <p><small>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank"
+                            rel="noopener">https://www.e-recht24.de/impressum-generator.html</a></small></p>
+            </div>
         </main>
+
         <footer>
             <div class="footer-content">
                 <p>&copy; 2026 Execord</p>
                 <div class="footer-links">
-                    <a href="https://youtube.com/@ittology">YouTube</a>
-                    <a href="https://ko-fi.com/ittology">Donate</a>
+                    <a href="https://youtube.com/@ittology" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://ko-fi.com/ittology" target="_blank" rel="noopener">Donate</a>
                 </div>
             </div>
         </footer>
     </div>
+
+    <script src="assets/doc-lang.js"></script>
 </body>
 
 </html>

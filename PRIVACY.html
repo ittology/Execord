@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Privacy Policy — Execord</title>
     <link rel="icon" type="image/png" href="https://cdn.discordapp.com/app-icons/1369325346465517609/af21a42389c4bff77c9f746a78cf100a.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,45 +21,74 @@
                 <a href="index.html" class="nav-back">← Back</a>
             </nav>
         </header>
+
         <main class="doc-content">
-            <p class="doc-date">Last updated: April 16, 2026</p>
+            <p class="doc-date">Last updated: August 21, 2026</p>
             <h1>Privacy Policy</h1>
-            <p>This document outlines how Execord handles data when you invite it to your Discord server. By using Execord, you agree to these guidelines.</p>
+            <p>This Privacy Policy explains how Execord collects, uses, stores, and protects data when you add the Execord bot to your Discord server, use its commands, or visit this website in accordance with the EU General Data Protection Regulation (GDPR).</p>
 
-            <h2>1. What data we store</h2>
-            <p>We only store the bare minimum required for the bot to function correctly. This includes:</p>
+            <h2>1. Controller (Responsible Party)</h2>
+            <p>The controller responsible for data processing within the meaning of Art. 4 (7) GDPR is:</p>
+            <p class="protected-data" data-b64="PHN0cm9uZz5KYW5uZXMgSXR0bmVyPC9zdHJvbmc+PGJyPklsbWVuYXVlciBTdHIuIDI1PGJyPjk5NDQ4IEtyYW5pY2hmZWxkLCBHZXJtYW55"></p>
+            <p>
+                Email: <span class="protected-email" data-b64="aXR0b2xvZ3kuY29udGFjdEBnbWFpbC5jb20="></span><br>
+                Support Discord: <a href="https://discord.gg/BBJTAsd8jy" target="_blank" rel="noopener">https://discord.gg/BBJTAsd8jy</a>
+            </p>
+
+            <h2>2. Categories of Processed Data</h2>
+            <p>Execord adheres to the principle of data minimization (Art. 5 (1) (c) GDPR). We only process data necessary for bot operation:</p>
             <ul>
-                <li><strong>Guild IDs:</strong> To keep track of server settings and token usage limits.</li>
-                <li><strong>User IDs:</strong> Used primarily for handling permissions.</li>
+                <li><strong>Discord Guild IDs &amp; Channel IDs:</strong> To identify servers, save token balances, and execute actions in the designated channels.</li>
+                <li><strong>Discord User IDs:</strong> To verify Discord administrator permissions before executing privileged actions.</li>
+                <li><strong>Natural Language Prompts:</strong> Prompt text submitted via <code>/execute</code> is transmitted in real-time to the AI pipeline to determine corresponding Discord actions.</li>
+                <li><strong>Operational Logs:</strong> Temporary debug logs are generated to diagnose API errors. Message contents from your channels are not stored or logged permanently.</li>
             </ul>
-            <p><em>We do not log or store any message content from your server channels unless you click the thumbs down button on the bot's response.</em></p>
 
-            <h2>2. How we use your data</h2>
-            <p>Data is strictly used for operational purposes:</p>
+            <h2>3. Legal Bases of Processing</h2>
+            <p>We process your data based on the following provisions of Art. 6 (1) GDPR:</p>
             <ul>
-                <li>To execute the actions you request via prompts.</li>
-                <li>To manage daily and bonus tokens per server.</li>
-                <li>For internal debugging (our error logs don't contain personal data).</li>
+                <li><strong>Art. 6 (1) (b) GDPR (Performance of a contract / Service provision):</strong> Processing is necessary to fulfill your command requests and manage server token quotas.</li>
+                <li><strong>Art. 6 (1) (f) GDPR (Legitimate interests):</strong> For debugging, preventing malicious exploits/abuse (e.g. prompt injection attacks), and ensuring stability and security.</li>
             </ul>
 
-            <h2>3. Data sharing</h2>
-            <p>We do not sell or share your server data with any third parties. However, to process natural language, the prompts you send to Execord are routed through an LLM API provider. These providers (such as Google or OpenAI) do not use this data to train their models under their enterprise terms.</p>
+            <h2>4. Third-Party Processors &amp; International Transfers</h2>
+            <p>To provide AI-powered automation and subscription features, Execord integrates with external services:</p>
+            <ul>
+                <li><strong>Discord Inc. (USA):</strong> Gateway infrastructure for bot operations and event reception. (EU-US Data Privacy Framework / Standard Contractual Clauses).</li>
+                <li><strong>Whop Inc. (USA):</strong> Merchant of Record for payment processing, billing, and subscription management. Payment details are entered directly into Whop's secure checkout and are never accessible to Execord.</li>
+                <li><strong>Database Hosting (e.g. Supabase Inc.):</strong> Secure cloud database storage for server IDs and token balances.</li>
+                <li><strong>LLM API Providers (e.g. Google Cloud, OpenAI, Anthropic):</strong> Natural language prompts are processed via enterprise API endpoints. Under enterprise terms, prompt data is not used to train AI models.</li>
+            </ul>
 
-            <h2>4. Data deletion</h2>
-            <p>Your data remains in our database as long as Execord is in your server. If you kick the bot and want your server's data wiped entirely, just open an issue or reach out in the support server.</p>
+            <h2>5. Data Storage Duration &amp; Deletion</h2>
+            <p>Data associated with your server is retained while Execord is present on your server. If you remove the bot, your data remains inactive. You may request immediate and complete deletion of all associated server records at any time by contacting us via email or our Discord support server.</p>
 
-            <h2>5. Contact</h2>
-            <p>If you have any questions or privacy concerns, feel free to drop by our <a href="https://discord.gg/BBJTAsd8jy">Support Discord</a>.</p>
+            <h2>6. Your Rights under GDPR</h2>
+            <p>Under the EU General Data Protection Regulation, you have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Right of Access (Art. 15 GDPR):</strong> You have the right to obtain confirmation and information on your stored data.</li>
+                <li><strong>Right to Rectification (Art. 16 GDPR):</strong> You may request correction of inaccurate personal data.</li>
+                <li><strong>Right to Erasure / "Right to be forgotten" (Art. 17 GDPR):</strong> You can request immediate deletion of your data.</li>
+                <li><strong>Right to Restriction of Processing (Art. 18 GDPR):</strong> You may request limited processing of your data under statutory conditions.</li>
+                <li><strong>Right to Data Portability (Art. 20 GDPR):</strong> You may receive your data in a structured, commonly used format.</li>
+                <li><strong>Right to Object (Art. 21 GDPR):</strong> You have the right to object at any time to processing based on Art. 6 (1) (f) GDPR.</li>
+                <li><strong>Right to Lodge a Complaint (Art. 77 GDPR):</strong> You have the right to lodge a complaint with a competent data protection supervisory authority.</li>
+            </ul>
+
+            <h2>7. Contact for Data Protection Inquiries</h2>
+            <p>If you have any questions, requests for data export, or deletion inquiries, please contact us at <a href="mailto:ittology.contact@gmail.com">ittology.contact@gmail.com</a> or join our <a href="https://discord.gg/BBJTAsd8jy" target="_blank" rel="noopener">Support Discord</a>.</p>
         </main>
+
         <footer>
             <div class="footer-content">
                 <p>&copy; 2026 Execord</p>
                 <div class="footer-links">
-                    <a href="https://youtube.com/@ittology">YouTube</a>
-                    <a href="https://ko-fi.com/ittology">Donate</a>
+                    <a href="https://youtube.com/@ittology" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://ko-fi.com/ittology" target="_blank" rel="noopener">Donate</a>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="assets/doc-lang.js"></script>
 </body>
 </html>

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /LEGAL.html
+Disallow: /LEGAL.md
+Disallow: /PRIVACY.html
+Disallow: /PRIVACY.md
 
 Sitemap: https://ittology.github.io/Execord/sitemap.xml

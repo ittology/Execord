@@ -4,29 +4,30 @@ title: Privacy Policy
 ---
 # Privacy Policy
 
-**Last updated:** April 16, 2026
+**Last updated:** August 21, 2026
 
-This document outlines how Execord handles data when you invite it to your Discord server. By using Execord, you agree to these guidelines.
+## 1. Controller
+For full controller details and postal address, see our [Interactive Privacy Policy](https://ittology.github.io/Execord/PRIVACY.html).  
+Email: [ittology.contact@gmail.com](mailto:ittology.contact@gmail.com) | Support Discord: [https://discord.gg/BBJTAsd8jy](https://discord.gg/BBJTAsd8jy)
 
-## 1. What data we store
-We only store the bare minimum required for the bot to function correctly. This includes:
-- **Guild IDs:** To keep track of server settings and token usage limits.
-- **User IDs:** Used primarily for handling permissions.
+## 2. Processed Data
+- **Guild IDs & Channel IDs:** To store server configurations, active settings, and track token quotas.
+- **User IDs:** Used solely to verify administrative permissions.
+- **Prompt Inputs:** The text submitted via `/execute` is processed in real time to generate Discord API actions.
+- **Operational Logs:** Temporary debugging logs without persistent message storage.
 
-*We do not log or store any message content from your server channels unless you click the thumbs down button on the bot's response.*
+## 3. Legal Bases
+- **Art. 6 (1) (b) GDPR:** Performance of contract / fulfilling requested bot actions.
+- **Art. 6 (1) (f) GDPR:** Legitimate interest in operational security, anti-abuse/prompt injection defense, and error diagnosis.
 
-## 2. How we use your data
-Data is strictly used for operational purposes:
-- To execute the actions you request via prompts.
-- To manage daily and bonus tokens per server.
-- For internal debugging (our error logs don't contain personal data).
+## 4. Third-Party Processors
+- **Discord Inc. (USA):** Bot platform and event delivery.
+- **Whop Inc. (USA):** Merchant of Record for billing, subscription management, and payment processing.
+- **Supabase Inc.:** Cloud database storage for server configuration.
+- **LLM API Providers (e.g., Google Cloud, OpenAI, Anthropic):** Prompt interpretation via enterprise zero-data-training endpoints.
 
-## 3. Data sharing
-We do not sell or share your server data with any third parties. 
-However, to process natural language, the prompts you send to Execord are routed through an LLM API provider. These providers (such as Google or OpenAI) do not use this data to train their models under their enterprise terms.
+## 5. Storage & Deletion
+Data remains linked to the server until the bot is removed. Server owners can request complete data erasure at any time via email or Support Discord.
 
-## 4. Data deletion
-Your data remains in our database as long as Execord is in your server. If you kick the bot and want your server's data wiped entirely, just open an issue or reach out in the support server.
-
-## 5. Contact
-If you have any questions or privacy concerns, feel free to drop by our [Support Discord](https://discord.gg/BBJTAsd8jy).
+## 6. Your Rights under GDPR
+Under GDPR (Art. 15–22, 77), you have rights to access, rectification, erasure, restriction of processing, data portability, objection, and lodging a complaint with a supervisory authority.
