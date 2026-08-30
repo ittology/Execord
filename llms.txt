@@ -3,12 +3,13 @@
 > Execord is an AI-powered Discord agent that allows server administrators to manage their entire server using natural language prompts instead of complex slash commands.
 
 ## Overview
-Execord converts plain text instructions into structured multi-step Discord API actions using an Orchestrator and domain-specific Sub-Agents (channels, roles, members, threads, messages, categories).
+Execord converts plain text instructions into structured multi-step Discord API actions using an Orchestrator and domain-specific Sub-Agents (channels, roles, members, threads, messages, categories, automations).
 
 ## Core Capabilities & Features
 - **Server Architecture:** Create, edit, move, or delete channels, categories, and voice/forum channels with custom topics, slowmodes, bitrate, and user limits.
 - **Role & Permission Management:** Create hex-colored roles (e.g. `#FFD700`), set hoist/mention properties, and configure complex channel permission overwrites for roles or members.
 - **Instant Moderation:** Timeout users (1 min to 28 days), kick members, ban users with audit log reasons, bulk-unban by User ID, and purge message history.
+- **AI Support Tickets & Automations:** Deploy 24/7 AI-powered ticket panels with interactive buttons, automated private channels (`ticket-username`), custom knowledge/instructions injection, and full lifecycle automation management.
 - **Messaging & Communication:** Send text or image messages, pin important posts, send private (ephemeral) responses, or bulk-purge messages.
 - **Thread Management:** Create, lock, archive, or configure slowmodes for public, private, or forum threads.
 - **AI Image Generation & Server Branding:** Generate custom graphics via AI text prompts and automatically apply them as server icons, banners, role icons, or channel attachments.
@@ -27,11 +28,12 @@ Execord operates primarily through Discord slash commands:
 
 ## Example Prompts
 - *"Create a community category with a general chat and 3 voice channels."*
+- *"Create a ticket panel in #tickets with category Support, support role @Support, and instructions 'Help users with billing and account questions'."*
 - *"Timeout @User for 1 hour for violating community rules."*
 - *"Create a 'VIP' role in gold (#FFD700) and give it to @User."*
 - *"Generate a futuristic shield icon and set it as the server icon."*
 - *"Create an announcements channel that only the @Admin role can write in."*
-- *"Who was the last person to ban a member?"*
+- *"List all active automations on the server."*
 
 ## Official Links & Resources
 - [Website](https://ittology.github.io/Execord)

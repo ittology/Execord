@@ -24,16 +24,17 @@ Execord's AI interprets your intent, builds a sequence of actions, and executes 
 | Goal | Example Prompt |
 | :--- | :--- |
 | **Server Setup** | *"Create a community category with a general chat and 3 voice channels."* |
+| **AI Tickets** | *"Create a ticket panel in #tickets with category Support, role @Support, and instructions to help with billing."* |
 | **Moderation** | *"Timeout @User for 1 hour for violating the rules."* |
 | **Role Management** | *"Create a 'VIP' role in gold and give it to @User."* |
 | **Bulk Cleanup** | *"Delete the 'Old-Archives' category and all channels inside it."* |
 | **Visuals** | *"Generate a futuristic shield icon and set it as the server icon."* |
 | **Permissions** | *"Create an announcements channel that only the @Admin role can write in."* |
-| **Investigation** | *"Who was the last person to ban a member?"* |
 
 ## ✨ Core Features
 
 - **Natural Language Control:** Speak to your server. No more memorizing `/` commands.
+- **AI Ticket Systems & Automations:** Deploy 24/7 AI-driven support ticket panels with custom knowledge, private channels, and one-click close buttons.
 - **Bulk Operations:** Handle massive server changes in a single sentence.
 - **Context Awareness:** Execord understands your server structure, channels, and roles by name.
 - **AI-Powered Permissions:** Set complex permission overwrites without manual clicking.
@@ -44,7 +45,7 @@ Execord's AI interprets your intent, builds a sequence of actions, and executes 
 Execord utilizes a **Multi-Agent Intent-to-Action pipeline**:
 
 1. **Orchestration:** Your prompt is decomposed into task pipelines by an Orchestrator agent.
-2. **Specialized Sub-Agents:** Dedicated domain agents (roles, channels, members, threads, messages) generate precise execution actions.
+2. **Specialized Sub-Agents:** Dedicated domain agents (roles, channels, members, threads, messages, automations) generate precise execution actions.
 3. **Verification:** Guild permissions are pre-checked for safety and compliance.
 4. **Execution:** Actions run sequentially with live status feedback in Discord embeds.
 

@@ -6,6 +6,14 @@ title: Changelog
 
 All notable changes to the Execord project will be documented in this file.
 
+## [2026-08-30] - AI Support Ticket Engine & Automations
+
+### Added
+- **AI Support Ticket Engine:** Create, edit, list, and delete AI-driven ticket panel systems directly via natural language prompts (e.g. `Create a ticket panel in #tickets with category Support and role @Support`).
+- **Interactive Ticket UI Views:** Persistent "📩 Create Ticket" buttons that spawn private channels (`ticket-username`), send welcome embeds with support pinging, and provide secure "🔒 Close Ticket" confirmation views.
+- **Custom Knowledge & Instructions:** Ingest tailored prompts, FAQs, or guidelines into ticket panels for 24/7 autonomous support responses inside ticket channels.
+- **Automation Quotas & Fallbacks:** Seamlessly integrated with account quotas (Free: 1, Pro: 10, Ultra: 25 active automations) with configurable fallback messages when quotas are exhausted.
+
 ## [2026-08-16] - Resume Usage Fix
 
 ### Fixed

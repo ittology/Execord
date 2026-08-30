@@ -51,6 +51,7 @@
                     <tr><td><strong>Threads</strong></td><td>Thread ID, Owner, Parent Channel, Name, Type (Public/Private/News), Tags, Slowmode, Creation Date, Archived/Locked status.</td></tr>
                     <tr><td><strong>Messages (Max 50)</strong></td><td>Message ID, Location, Author, Content (Text), Pinned status, Creation/Edit Date, and if it replies to another message.</td></tr>
                     <tr><td><strong>Audit Logs (Max 50)</strong></td><td>Action taken, Member who performed it, Target of the action, Reason provided, Creation Date, and detailed 'Before' &amp; 'After' state changes.</td></tr>
+                    <tr><td><strong>Automations</strong></td><td>Automation ID, Type (e.g. ticket_panel), Trigger Config (Panel Channel ID, Panel Message ID, Category ID, Support Roles), Action Config (Knowledge/Instructions, Welcome Message, Fallback Message), Created By.</td></tr>
                 </tbody>
             </table>
 
@@ -114,12 +115,22 @@
                 <li><strong>Apply Everywhere:</strong> Both provided URLs and generated images can be applied as message attachments, Role Icons, Server Icons, Server Banners, or Invite Splash Images.</li>
             </ul>
 
+            <h3>Automations &amp; AI Ticket Systems</h3>
+            <ul>
+                <li><strong>Create Ticket Panel:</strong> Set target panel channel, support category, custom instructions/knowledge, welcome message, fallback message, and support roles. Automatically posts an interactive Discord embed with a persistent "📩 Create Ticket" button.</li>
+                <li><strong>Edit Automations:</strong> Update instructions, welcome message, fallback message, target category, or support roles for any automation ID.</li>
+                <li><strong>Delete Automations:</strong> Safely delete an automation configuration and automatically remove the associated Discord panel embed message.</li>
+                <li><strong>Autonomous Support Lifecycle:</strong> Spawns private channels (<code>ticket-username</code>), assigns support role permissions, injects custom knowledge for instant AI responses, and provides a secure "🔒 Close Ticket" confirmation view.</li>
+            </ul>
+
             <hr>
 
             <h2>Action Chaining</h2>
             <p>Because Execord uses a Large Language Model, it can smartly use variables between actions. For example:</p>
             <blockquote>"Create a role called VIP, then create a private text channel where only VIPs can read messages, and post a welcome message inside it."</blockquote>
-            <p>The bot will execute this perfectly in one go — creating the role, saving its ID, creating the channel with the correct permission overwrite, and sending the message into the new channel.</p>
+            <p>Or for automations:</p>
+            <blockquote>"Create a category called 'Support', a channel called #tickets inside it, and set up an AI ticket panel with role @Support and instructions 'Help users with billing and setup questions'."</blockquote>
+            <p>The bot will execute this perfectly in one go — creating each resource, saving its newly generated ID, and chaining it into subsequent actions seamlessly.</p>
         </main>
 
         <footer>

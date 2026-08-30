@@ -25,6 +25,7 @@ Before making changes, Execord can look up information about your server to gath
 | **Threads** | Thread ID, Owner, Parent Channel, Name, Type (Public/Private/News), Tags, Slowmode, Creation Date, Archived/Locked status. |
 | **Messages (Max 50 at once)** | Message ID, Location, Author, Content (Text), Pinned status, Creation/Edit Date, and if it replies to another message. |
 | **Audit Logs (Max 50 at once)** | Action taken, Member who performed it, Target of the action, Reason provided, Creation Date, and detailed 'Before' & 'After' state changes. |
+| **Automations** | Automation ID, Type (e.g. ticket_panel), Trigger Config (Panel Channel ID, Panel Message ID, Category ID, Support Roles), Action Config (Knowledge/Instructions, Welcome Message, Fallback Message), Created By. |
 
 > [!NOTE]
 > Execord **cannot** read messages outside of the channel you run the command in, unless you explicitly tell it to "Read the last 10 messages in #[channel name]". It does not log message content.
@@ -106,10 +107,24 @@ Execord can execute direct changes to your server architecture, roles, and membe
 - **Apply Images Everywhere**
     - Thanks to Action Chaining, both provided URLs and generated images can instantly be applied as message attachments, Role Icons, Server Icons, Server Banners, or Server Invite Splash Images.
 
+### Automations & AI Ticket Systems
+- **Create Ticket Panel**
+    - Set target panel channel, support category, custom instructions/knowledge, welcome message, fallback message, and support roles.
+    - Automatically posts an interactive Discord embed with a persistent "📩 Create Ticket" button.
+- **Edit Automations**
+    - Update instructions, welcome message, fallback message, target category, or support roles for any automation ID.
+- **Delete Automations**
+    - Safely delete an automation configuration and automatically remove the associated Discord panel embed message.
+- **Autonomous Support Lifecycle**
+    - Spawns private channels (`ticket-username`), assigns support role permissions, injects custom knowledge for instant AI responses, and provides a secure "🔒 Close Ticket" confirmation view.
+
 ---
 
 ## Action Chaining
 Because Execord uses a LLM (Large Language Model), it can smartly use variables. For example, if you tell it:
 *"Create a role called VIP, then create a private text channel where only VIPs can read messages, and post a welcome message inside it."*
 
-The bot will execute this perfectly in one go. It understands how to create the role, save its new ID, create the channel using that ID for the permission overwrite, and then send the message into the new channel.
+Or for automations:
+*"Create a category called 'Support', a channel called #tickets inside it, and set up an AI ticket panel with role @Support and instructions 'Help users with billing and setup questions'."*
+
+The bot will execute this perfectly in one go. It understands how to create each resource, save its newly generated ID, and chain it into subsequent actions seamlessly.
