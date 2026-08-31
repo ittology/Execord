@@ -156,9 +156,8 @@
                             in."</p>
                         <div class="example-tag">Permission Master</div>
                     </article>
-                    <article class="example-card">
-                        <p class="example-prompt">"Create a ticket panel in #tickets with category Support, role
-                            @Support, and instructions to help with billing."</p>
+                    <article class="example-card" data-full-prompt="Create a ticket panel in #tickets with category Support, role @Support, and instructions: 'Execord Pro is $4.99/mo and Ultra is $9.99/mo. Help users with questions and ask them to ping staff for refunds.'">
+                        <p class="example-prompt">"Create a ticket panel in #tickets with category Support, role @Support, and instructions: 'Execord Pro is $4.99/mo..."</p>
                         <div class="example-tag">AI Tickets</div>
                     </article>
                 </div>
@@ -355,7 +354,7 @@
                 const promptElement = card.querySelector('.example-prompt');
                 const tagElement = card.querySelector('.example-tag');
 
-                let text = promptElement.textContent.trim().replace(/\s+/g, ' ');
+                let text = card.dataset.fullPrompt || promptElement.textContent.trim().replace(/\s+/g, ' ');
                 if (text.startsWith('"') && text.endsWith('"')) {
                     text = text.substring(1, text.length - 1);
                 }
