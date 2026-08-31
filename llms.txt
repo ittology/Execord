@@ -28,7 +28,7 @@ Execord operates primarily through Discord slash commands:
 
 ## Example Prompts
 - *"Create a community category with a general chat and 3 voice channels."*
-- *"Create a 'Support' category, a #tickets channel, and an AI ticket panel with instructions 'Answer questions about server roles and rules. Verification happens in #verify. For partnerships and member reports, tell users to wait for staff'."*
+- *"Create a 'Support' category, a #tickets channel, and an AI ticket panel with instructions 'Verification happens in #verify. For partnerships and member reports, tell users to wait for staff'."*
 - *"Timeout @User for 1 hour for violating community rules."*
 - *"Create a 'VIP' role in gold (#FFD700) and give it to @User."*
 - *"Generate a futuristic shield icon and set it as the server icon."*
