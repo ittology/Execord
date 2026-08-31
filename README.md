@@ -24,7 +24,7 @@ Execord's AI interprets your intent, builds a sequence of actions, and executes 
 | Goal | Example Prompt |
 | :--- | :--- |
 | **Server Setup** | *"Create a community category with a general chat and 3 voice channels."* |
-| **AI Tickets** | *"Create a ticket panel in #tickets with category Support, role @Support, and instructions to help with billing."* |
+| **AI Tickets** | *"Create a 'Tickets' category, a #tickets channel, and an AI ticket panel with instructions to answer server questions."* |
 | **Moderation** | *"Timeout @User for 1 hour for violating the rules."* |
 | **Role Management** | *"Create a 'VIP' role in gold and give it to @User."* |
 | **Bulk Cleanup** | *"Delete the 'Old-Archives' category and all channels inside it."* |
