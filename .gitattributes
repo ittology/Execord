@@ -1,0 +1,12 @@
+# Force LF line endings for text files
+* text=auto eol=lf
+
+# Explicitly mark binary files to prevent line-ending corruption
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
